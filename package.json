@@ -46,6 +46,7 @@
     "jest-prop-type-error": "^1.1.0",
     "kleur": "^4.1.1",
     "lint-staged": "^10.2.11",
+    "nodemon": "^2.0.20",
     "prettier-eslint-cli": "^5.0.0",
     "prompts": "^2.3.2",
     "yaml": "^1.10.0"
@@ -83,6 +84,7 @@
     "lint": "eslint 'src/**/*.{js,jsx}'",
     "prettier": "prettier --write \"**/*.+(js|jsx|json|css|md)\"",
     "start": "node start.js",
+    "server": "nodemon start.js",
     "test": "craco test --env=jest-environment-jsdom-sixteen"
   },
   "version": "0.1.0"
