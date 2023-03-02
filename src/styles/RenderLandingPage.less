@@ -41,16 +41,44 @@
     font-size: 1.2rem;
 }
 
-// .graphs-section {
-//  ADD THIS BACK IN WHEN YOU HAVE THE GRAPHS SECTION
-// }
+.graphs-section {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: "acumin";
+}
+
+.graphs-partial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.graphs-img {
+    height: 165px;
+    margin-bottom: 30px;
+}
+
+#graph-margin {
+    margin-right: 12px;
+}
 
 .view-more-data-btn-container {
-    height: 44px;
-    width: 180px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
     text-align: center;
-    margin-bottom: 10%;
+    margin: 5% 0 10% 0;
+}
+
+.view-more-data-btn-container .graphs-buttons {
+    background-color: #404C4A;
+    color: #FFFFFF;
+    &:hover {
+        cursor: pointer;
+        border: 1px solid rgb(96, 94, 94);
+        background-color: #404C4A;
+        color: #FFFFFF;
+    }
 }
 
 .middle-section {
