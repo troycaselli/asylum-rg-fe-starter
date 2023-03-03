@@ -47,6 +47,7 @@
     display: flex;
     justify-content: space-evenly;
     font-family: "acumin";
+    text-align: center;
     padding-top: 7%;
 }
 
@@ -84,6 +85,10 @@
     }
 }
 
+.left-button-margin {
+    margin-right: 25px;
+}
+
 .middle-section {
     display: flex;
     justify-content: space-evenly;
@@ -110,16 +115,56 @@
     font-size: 1.4rem;
 }
 
-// .bottom-section {
-//      ADD THIS BACK IN WHEN YOU HAVE A BOTTOM SECTION
-// }
+.bottom-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'acumin';
+}
+
+.bottom-section h1 {
+    text-align: center;
+    font-size: 3.5rem;
+    margin: 8% 0;
+    width: 100%;
+
+}
+
+#data-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+
+}
+
+.data-point-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    width: 27%;
+}
+
+.data-point-container h2 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.data-point-container p {
+    text-align: center;
+    font-size: 1.2rem;
+}
 
 .back-to-top {
-    width: 8%;
     font-size: 1.2rem;
     cursor: pointer;
     color: black;
-    margin: 5% auto;
+    margin: 5% 0 2% 0;
+    text-align: center;
+}
+
+.back-to-top p {
+    margin: 0;
 }
 
 .ant-space-align-center {
@@ -171,6 +216,17 @@
 
     .graphs-img {
         margin-top: 10%;
+    }
+
+    .view-more-data-btn-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10% 0 15% 0;
+    }
+
+    .left-button-margin {
+        margin: 0 0 25px 0;
     }
 
     .grant-rates-by-office-graph-container {
@@ -225,29 +281,33 @@
         font-size: 2rem;
     }
 
-    .data-container {
+    #data-container {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .data-point-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         width: 100%;
     }
 
-    .first-data-point-container {
-        width: 85%;
-        margin-bottom: 5%;
+    .data-point-container h2 {
+        font-size: 2.6rem;
+        margin: 3% 0;
     }
 
-    .second-data-point-container {
+    .data-point-container p {
         width: 85%;
-        margin-bottom: 5%;
-    }
-
-    .third-data-point-container {
-        width: 85%;
-        margin-bottom: 5%;
+        font-size: 1.1rem;
+        margin-bottom: 10%;
     }
 
     .back-to-top {
-        width: 35%;
+        font-size: 1rem;
+        margin-bottom: 5%;
     }
 
 
@@ -338,32 +398,36 @@
     }
 
     .bottom-section h1 {
-        font-size: 2.1rem;
+        font-size: 2rem;
     }
 
-    .data-container {
+    #data-container {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .data-point-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         width: 100%;
     }
 
-    .first-data-point-container {
-        width: 85%;
-        margin-bottom: 5%;
+    .data-point-container h2 {
+        font-size: 2.6rem;
+        margin: 3% 0;
     }
 
-    .second-data-point-container {
+    .data-point-container p {
         width: 85%;
-        margin-bottom: 5%;
-    }
-
-    .third-data-point-container {
-        width: 85%;
-        margin-bottom: 5%;
+        font-size: 1.1rem;
+        margin-bottom: 10%;
     }
 
     .back-to-top {
         width: 35%;
+        font-size: 1.1rem;
     }
 
     .ant-space-align-center {
@@ -428,8 +492,8 @@
         margin-bottom: 40%;
     }
 
-    .view-more-data-btn-container Button {
-        margin: 5% 0;
+    .view-more-data-btn-container {
+        margin: 10% 0 15% 0;
     }
 
     .middle-section {
@@ -462,29 +526,33 @@
         font-size: 2.1rem;
     }
 
-    .data-container {
+    #data-container {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .data-point-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         width: 100%;
     }
 
-    .first-data-point-container {
-        width: 85%;
-        margin-bottom: 5%;
+    .data-point-container h2 {
+        font-size: 3rem;
+        margin-bottom: 0;
     }
 
-    .second-data-point-container {
+    .data-point-container p {
         width: 85%;
-        margin-bottom: 5%;
-    }
-
-    .third-data-point-container {
-        width: 85%;
-        margin-bottom: 5%;
+        font-size: 1.2rem;
+        margin-bottom: 10%;
     }
 
     .back-to-top {
         width: 35%;
+        font-size: 1.1rem;
     }
 
     .ant-space-align-center {
@@ -587,32 +655,36 @@
     }
 
     .bottom-section h1 {
-        font-size: 2.7rem;
+        font-size: 2.6rem;
     }
 
-    .data-container {
+    #data-container {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .data-point-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         width: 100%;
     }
 
-    .first-data-point-container {
-        width: 85%;
-        margin-bottom: 5%;
+    .data-point-container h2 {
+        font-size: 3rem;
+        margin-bottom: 0;
     }
 
-    .second-data-point-container {
+    .data-point-container p {
         width: 85%;
-        margin-bottom: 5%;
-    }
-
-    .third-data-point-container {
-        width: 85%;
-        margin-bottom: 5%;
+        font-size: 1.2rem;
+        margin-bottom: 10%;
     }
 
     .back-to-top {
         width: 35%;
+        font-size: 1.1rem;
     }
 
     .ant-space-align-center {
@@ -712,8 +784,8 @@
         width: 172px;
     }
 
-    .view-more-data-btn-container Button {
-        margin: 5% 0;
+    .view-more-data-btn-container {
+        margin: 10% 0 15% 0;
     }
 
     .middle-section {
@@ -746,44 +818,29 @@
         font-size: 3.5rem;
     }
 
-    .data-container {
+    #data-container {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .data-point-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         width: 100%;
     }
 
-    .first-data-point-container {
+    .data-point-container h2 {
+        font-size: 3.5rem;
+        margin-bottom: 0;
+    }
+
+    .data-point-container p {
         width: 85%;
-        margin-bottom: 5%;
-    }
-    .first-data-point-container h2 {
-       font-size: 3.5rem;
-    }
-    .first-data-point-container h3 {
         font-size: 1.5rem;
+        margin-bottom: 10%;
     }
-
-    .second-data-point-container {
-        width: 85%;
-        margin-bottom: 5%;
-    }
-    .second-data-point-container h2 {
-        font-size: 3.5rem;
-     }
-     .second-data-point-container h3 {
-         font-size: 1.5rem;
-     }
-
-    .third-data-point-container {
-        width: 85%;
-        margin-bottom: 5%;
-    }
-    .third-data-point-container h2 {
-        font-size: 3.5rem;
-     }
-     .third-data-point-container h3 {
-         font-size: 1.5rem;
-     }
 
     .back-to-top {
         width: 35%;
@@ -818,22 +875,6 @@
         padding: 0 2%;
     }
    
- .first-data-point-container {
-        width: 23%;
-    }
-
-    .middle-section-text-container {
-        width: 45%;
-    }
-
-    .second-data-point-container {
-        width: 23%;
-    }
-
-    .third-data-point-container {
-        width: 23%;
-    }
-    
     .back-to-top {
         width: 35%;
     }
