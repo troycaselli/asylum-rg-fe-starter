@@ -61,8 +61,7 @@ function RenderLandingPage(props) {
 
       <div className="view-more-data-btn-container">
         <Button
-          className="graphs-buttons"
-          style={{ marginRight: '25px' }}
+          className="graphs-buttons left-button-margin"
           onClick={() => history.push('/graphs')}
         >
           View the Data
@@ -119,10 +118,10 @@ function RenderLandingPage(props) {
             </p>
           </div>
         </div>
-        <p onClick={() => scrollToTop()} className="back-to-top">
-          Back To Top
-        </p>
-        <p>^</p>
+        <div className="back-to-top">
+          <p onClick={() => scrollToTop()}>Back To Top</p>
+          <p onClick={() => scrollToTop()}>^</p>
+        </div>
       </section>
     </div>
   );
