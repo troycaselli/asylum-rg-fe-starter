@@ -1,7 +1,7 @@
 @main-color: #404C4A;
 @secondary-color: #707070;
 @white: #FFFFFF;
-@mobile-small: ~"(min-width: 320px) and (max-width: 375px)";
+@mobile-small: ~"(max-width: 375px)";
 @mobile-medium: ~"(min-width: 376px) and (max-width: 414px)";
 @mobile-large: ~"(min-width: 415px) and (max-width: 480px)";
 @tablet-small: ~"(min-width: 481px) and (max-width: 768px)";
@@ -90,14 +90,18 @@
     align-items: center;
 }
 
+.hrf-img-container {
+    width: 40%;
+}
+
 .hrf-img {
     height: 339px;
-    width: 648px;
+    width: 100%;
     border-radius: 10px;
 }
 
 .middle-section-text-container {
-    width: 700px;
+    width: 40%;
     text-align: center;
 }
 
@@ -129,7 +133,7 @@
     border-color: @secondary-color  !important;
 }
 
-@media @mobile-small {
+@media @mobile-small { // 0px-375px
     .header {
        display: block;
        position: relative;
@@ -191,25 +195,30 @@
         flex-wrap: wrap;
         width: 100%;
         background-color: @secondary-color;
-        padding: 15% 0 10% 0;
+        padding: 5% 0;
         text-align: center;
+        
+    }
+
+    .hrf-img-container {
+        width: 70%;
+        margin-bottom: 7%;
     }
 
     .hrf-img {
-        height: 169px;
-        width: 324px;
+        height: 300px;
     }
-
+    
     .middle-section-text-container {
         width: 85%;
-        text-align: center;
+       text-align: center;
         margin: 0 auto;
-       
     }
 
     .middle-section-text-container h3 {
-        font-size: .95rem;
+        font-size: 1.1rem;
         color: @white;
+        margin-bottom: 0;
     }
 
     .bottom-section h1 {
@@ -244,7 +253,7 @@
 
 }
 
-@media @mobile-medium {
+@media @mobile-medium { // 376px-414px
     .header {
        display: block;
        position: relative;
@@ -307,9 +316,13 @@
         
     }
 
+    .hrf-img-container {
+        width: 70%;
+        margin-bottom: 7%;
+    }
+
     .hrf-img {
-        height: 197px;
-        width: 378px;
+        height: 300px;
     }
 
     .middle-section-text-container {
@@ -321,6 +334,7 @@
     .middle-section-text-container h3 {
         font-size: 1.1rem;
         color: @white;
+        margin-bottom: 0;
     }
 
     .bottom-section h1 {
@@ -358,7 +372,7 @@
     }
 }
 
-@media @mobile-large {
+@media @mobile-large { // 415px-480px
     .header {
        display: block;
        position: relative;
@@ -423,13 +437,13 @@
         flex-wrap: wrap;
         width: 100%;
         background-color: @secondary-color;
-        padding: 5% 0;
+        padding: 10% 0;
         text-align: center;
     }
 
-    .hrf-img {
-        height: 197px;
-        width: 378px;
+    .hrf-img-container {
+        width: 70%;
+        margin-bottom: 7%;
     }
 
     .middle-section-text-container {
@@ -441,6 +455,7 @@
     .middle-section-text-container h3 {
         font-size: 1.1rem;
         color: @white;
+        margin-bottom: 0;
     }
 
     .bottom-section h1 {
@@ -479,7 +494,7 @@
     
 }
 
-@media @tablet-small {
+@media @tablet-small { // 481px-768px
     .header {
        display: block;
        position: relative;
@@ -546,16 +561,17 @@
     }
 
     .middle-section {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         width: 100%;
         background-color: @secondary-color;
         padding: 10% 0;
         text-align: center;
     }
 
-    .hrf-img {
-        height: 288px;
-        width: 552px;
+    .hrf-img-container {
+        width: 85%;
     }
 
     .middle-section-text-container {
@@ -605,7 +621,7 @@
     }
 }
 
-@media @tablet-large {
+@media @tablet-large { // 769px-1024px
     .header {
        display: block;
        position: relative;
@@ -701,16 +717,17 @@
     }
 
     .middle-section {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         width: 100%;
         background-color: @secondary-color;
         padding: 10% 0;
         text-align: center;
     }
 
-    .hrf-img {
-        height: 418px;
-        width: 800px;
+    .hrf-img-container {
+        width: 85%;
     }
 
     .middle-section-text-container {
@@ -781,7 +798,7 @@
     }
 }
 
-@media @laptop {
+@media @laptop { // 1025px-1280px
     .header-text-container h1 {
         font-size: 2.8rem;
         padding-top: 5%;
@@ -800,22 +817,13 @@
         justify-content: space-evenly;
         padding: 0 2%;
     }
-
-    .hrf-img {
-        height: 318px;
-        width: 608px;
-    }
-
-    .middle-section-text-container {
-        width: 85%;
-        text-align: center;
-        margin: 0 auto;
-        padding: 0 2%;
-    }
-
    
  .first-data-point-container {
         width: 23%;
+    }
+
+    .middle-section-text-container {
+        width: 45%;
     }
 
     .second-data-point-container {
