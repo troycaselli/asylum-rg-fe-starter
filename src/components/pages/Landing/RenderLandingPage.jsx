@@ -30,6 +30,7 @@ function RenderLandingPage(props) {
           </h3>
         </div>
       </div>
+
       <section className="graphs-section">
         <div className="graphs-partial">
           <img
@@ -57,6 +58,7 @@ function RenderLandingPage(props) {
           <h2>Search Grant Rates Over Time</h2>
         </div>
       </section>
+
       <div className="view-more-data-btn-container">
         <Button
           className="graphs-buttons"
