@@ -13,8 +13,6 @@
     display:flex;
     text-align: center;
     width: 100%;
-    height: 20vh;
-    margin-bottom: 10%;
 }
 
 .hrf-logo-img-container img {
@@ -24,9 +22,12 @@
 }
 
 .header-text-container {
-    text-align: center;
     width: 100%;
     align-items: center;
+    padding-bottom: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .header-text-container h1 {
@@ -38,19 +39,49 @@
 .header-text-container h3 {
     font-family: 'beatrice regular';
     color: @white;
+    width: 75%;
     font-size: 1.2rem;
 }
 
-// .graphs-section {
-//  ADD THIS BACK IN WHEN YOU HAVE THE GRAPHS SECTION
-// }
+.graphs-section {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: "acumin";
+    padding-top: 7%;
+}
+
+.graphs-partial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.graphs-img {
+    height: 165px;
+    margin-bottom: 30px;
+}
+
+#graph-margin {
+    margin-right: 12px;
+}
 
 .view-more-data-btn-container {
-    height: 44px;
-    width: 180px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
     text-align: center;
-    margin-bottom: 10%;
+    margin: 4% 0 8% 0;
+}
+
+.view-more-data-btn-container .graphs-buttons {
+    background-color: #404C4A;
+    color: #FFFFFF;
+    &:hover {
+        cursor: pointer;
+        border: 1px solid rgb(96, 94, 94);
+        background-color: #404C4A;
+        color: #FFFFFF;
+    }
 }
 
 .middle-section {
@@ -100,7 +131,6 @@
 
 @media @mobile-small {
     .header {
-        height: 30vh;
        display: block;
        position: relative;
     }
@@ -127,11 +157,16 @@
         font-size: .85rem;
         width: 85%;
         margin: 0 auto;
+        padding-bottom: 5%;
     }
 
     .graphs-section {
         display: block;
         width: 100%;
+    }
+
+    .graphs-img {
+        margin-top: 10%;
     }
 
     .grant-rates-by-office-graph-container {
@@ -155,9 +190,8 @@
         display: flex;
         flex-wrap: wrap;
         width: 100%;
-        height: 75vh;
         background-color: @secondary-color;
-        padding-top: 15%;
+        padding: 15% 0 10% 0;
         text-align: center;
     }
 
@@ -212,7 +246,6 @@
 
 @media @mobile-medium {
     .header {
-        height: 20vh;
        display: block;
        position: relative;
     }
@@ -239,6 +272,7 @@
         font-size: .85rem;
         width: 85%;
         margin: 0 auto;
+        padding-bottom: 5%;
     }
 
     .graphs-section {
@@ -267,9 +301,8 @@
         display: flex;
         flex-wrap: wrap;
         width: 100%;
-        height: 75vh;
         background-color: @secondary-color;
-        padding-top: 5%;
+        padding: 5% 0;
         text-align: center;
         
     }
@@ -327,7 +360,6 @@
 
 @media @mobile-large {
     .header {
-        height: 20vh;
        display: block;
        position: relative;
     }
@@ -353,11 +385,16 @@
         font-size: .85rem;
         width: 85%;
         margin: 0 auto;
+        padding-bottom: 5%;
     }
 
     .graphs-section {
         display: block;
         width: 100%;
+    }
+
+    .graphs-img {
+        margin-top: 15%;
     }
 
     .grant-rates-by-office-graph-container {
@@ -377,13 +414,16 @@
         margin-bottom: 40%;
     }
 
+    .view-more-data-btn-container Button {
+        margin: 5% 0;
+    }
+
     .middle-section {
         display: flex;
         flex-wrap: wrap;
         width: 100%;
-        height: 75vh;
         background-color: @secondary-color;
-        padding-top: 5%;
+        padding: 5% 0;
         text-align: center;
     }
 
@@ -441,7 +481,6 @@
 
 @media @tablet-small {
     .header {
-        height: 30vh;
        display: block;
        position: relative;
     }
@@ -468,11 +507,21 @@
         font-size: 1.3rem;
         width: 85%;
         margin: 0 auto;
+        padding-bottom: 5%;
     }
 
     .graphs-section {
         display: block;
         width: 100%;
+        padding-top: 0;
+    }
+
+    .graphs-img {
+        margin-top: 15%;
+    }
+
+    .graphs-section h2 {
+        margin-bottom: 0;
     }
 
     .grant-rates-by-office-graph-container {
@@ -492,12 +541,15 @@
         margin-bottom: 40%;
     }
 
+    .view-more-data-btn-container {
+        margin: 8% 0 10% 0;
+    }
+
     .middle-section {
         display: block;
         width: 100%;
-        height: 75vh;
         background-color: @secondary-color;
-        padding-top: 10%;
+        padding: 10% 0;
         text-align: center;
     }
 
@@ -555,22 +607,20 @@
 
 @media @tablet-large {
     .header {
-        height: 30vh;
        display: block;
        position: relative;
     }
-    .hrf-logo-img-container{
+    
+    .hrf-logo-img-container {
        height:fit-content;
        position: absolute;
        top: 0;
        left: 0;
-       
     }
 
     .hrf-logo-img-container img {
         height: 83px;
         width: 136px;
-       
     }
    
     .header-text-container h1 {
@@ -582,11 +632,23 @@
         font-size: 1.8rem;
         width: 85%;
         margin: 0 auto;
+        padding-bottom: 4%;
     }
 
     .graphs-section {
         display: block;
         width: 100%;
+        padding-top: 0;
+    }
+
+    .graphs-img {
+        height: 232px;
+        margin-top: 15%;
+    }
+
+    .graphs-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 0;
     }
 
     .grant-rates-by-office-graph-container {
@@ -634,12 +696,15 @@
         width: 172px;
     }
 
+    .view-more-data-btn-container Button {
+        margin: 5% 0;
+    }
+
     .middle-section {
         display: block;
         width: 100%;
-        height: 75vh;
         background-color: @secondary-color;
-        padding-top: 10%;
+        padding: 10% 0;
         text-align: center;
     }
 
@@ -717,10 +782,6 @@
 }
 
 @media @laptop {
-    .header {
-        height: 35vh;
-    }
-
     .header-text-container h1 {
         font-size: 2.8rem;
         padding-top: 5%;
@@ -730,6 +791,7 @@
         font-size: 1.4rem;
         width: 75%;
         margin: 0 auto;
+        padding-bottom: 3%;
     }
 
     .middle-section {
