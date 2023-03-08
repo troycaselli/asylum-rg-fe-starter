@@ -61,13 +61,13 @@ function RenderLandingPage(props) {
 
       <div className="view-more-data-btn-container">
         <Button
-          className="graphs-buttons left-button-margin"
+          className="landing-buttons left-button-margin"
           onClick={() => history.push('/graphs')}
         >
           View the Data
         </Button>
         <Button
-          className="graphs-buttons"
+          className="landing-buttons"
           onClick={() => history.push('/graphs')}
         >
           Download the Data
@@ -117,6 +117,17 @@ function RenderLandingPage(props) {
               asylum office.
             </p>
           </div>
+        </div>
+        <div className="read-more-data-btn-container">
+          <Button className="read-more-button">
+            <a
+              href="https://humanrightsfirst.org/library/uscis-records-reveal-systemic-disparities-in-asylum-decisions/"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Read More
+            </a>
+          </Button>
         </div>
         <div className="back-to-top">
           <p onClick={() => scrollToTop()}>Back To Top</p>
