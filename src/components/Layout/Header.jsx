@@ -1,14 +1,19 @@
 import React from 'react';
 import { Image } from 'antd';
 import { Link } from 'react-router-dom';
+import { useAuth0 } from '@auth0/auth0-react';
 import Logo from '../../styles/Images/WhiteLogo.png';
 import { colors } from '../../styles/data_vis_colors';
-import AuthenticationNav from '../common/authenticationNav';
+import LoginButton from '../common/loginButton';
+import LogoutButton from '../common/logoutButton';
+import SignupButton from '../common/signupButton';
 import '../../styles/Header.less';
 
 const { primary_accent_color } = colors;
 
 function HeaderContent() {
+  const { isAuthenticated } = useAuth0();
+
   return (
     <div
       className="header-container"
@@ -26,7 +31,14 @@ function HeaderContent() {
         <Link to="/graphs" className="nav-links">
           Graphs
         </Link>
-        <AuthenticationNav />
+        {isAuthenticated ? <LogoutButton /> : <LoginButton />}
+        {isAuthenticated ? (
+          <Link to="/profile" className="nav-links">
+            Profile
+          </Link>
+        ) : (
+          <SignupButton />
+        )}
       </div>
     </div>
   );

@@ -5,13 +5,12 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import 'antd/dist/antd.less';
 import { NotFoundPage } from './components/pages/NotFound';
 import { LandingPage } from './components/pages/Landing';
+import { Profile } from './components/pages/Profile';
 
 import { FooterContent, SubFooter } from './components/Layout/Footer';
 import { HeaderContent } from './components/Layout/Header';
-import Loading from './components/common/Loading';
+// import Loading from './components/common/Loading';
 import Auth0ProviderWithHistory from './auth/auth0ProviderWithHistory';
-
-// import { TablePage } from './components/pages/Table';
 
 import { Layout } from 'antd';
 import GraphsContainer from './components/pages/DataVisualizations/GraphsContainer';
@@ -53,6 +52,7 @@ export function App() {
       <Switch>
         <Route path="/" exact component={LandingPage} />
         <Route path="/graphs" component={GraphsContainer} />
+        <Route path="/profile" component={Profile} />
         <Route component={NotFoundPage} />
       </Switch>
       <Footer
