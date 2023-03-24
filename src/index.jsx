@@ -1,11 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {
-  BrowserRouter as Router,
-  Route,
-  // useHistory,
-  Switch,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import 'antd/dist/antd.less';
 import { NotFoundPage } from './components/pages/NotFound';
@@ -13,6 +8,8 @@ import { LandingPage } from './components/pages/Landing';
 
 import { FooterContent, SubFooter } from './components/Layout/Footer';
 import { HeaderContent } from './components/Layout/Header';
+import Loading from './components/common/Loading';
+import Auth0ProviderWithHistory from './auth/auth0ProviderWithHistory';
 
 // import { TablePage } from './components/pages/Table';
 
@@ -28,29 +25,31 @@ const { primary_accent_color } = colors;
 const store = configureStore({ reducer: reducer });
 ReactDOM.render(
   <Router>
-    <Provider store={store}>
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>
-    </Provider>
+    <Auth0ProviderWithHistory>
+      <Provider store={store}>
+        <React.StrictMode>
+          <App />
+        </React.StrictMode>
+      </Provider>
+    </Auth0ProviderWithHistory>
   </Router>,
   document.getElementById('root')
 );
 
 export function App() {
-  const { Footer, Header } = Layout;
+  const { Footer } = Layout;
   return (
     <Layout>
-      <Header
+      <div
         style={{
-          height: '10vh',
+          padding: '0',
           display: 'flex',
           alignItems: 'center',
           backgroundColor: primary_accent_color,
         }}
       >
         <HeaderContent />
-      </Header>
+      </div>
       <Switch>
         <Route path="/" exact component={LandingPage} />
         <Route path="/graphs" component={GraphsContainer} />
