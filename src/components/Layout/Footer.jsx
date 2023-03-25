@@ -9,7 +9,7 @@ const { primary_accent_color } = colors;
 
 function FooterContent() {
   return (
-    <div>
+    <div id="upper-footer-wrapper">
       {/*logo*/}
       <div>
         <Image width={100} src={Logo} preview={false} alt="HRF logo white" />
