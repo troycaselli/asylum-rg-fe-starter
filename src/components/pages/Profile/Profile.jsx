@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Highlight } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
+import '../../../styles/Profile.less';
 
 const Profile = () => {
   const { user } = useAuth0();
@@ -7,23 +8,17 @@ const Profile = () => {
 
   return (
     <div>
-      <div className="row align-items-center profile-header">
-        <div className="col-md-2 mb-3">
-          <img
-            src={picture}
-            alt="Profile"
-            className="rounded-circle img-fluid profile-picture mb-3 mb-md-0"
-          />
-        </div>
-        <div className="col-md text-center text-md-left">
+      <div className="profile-wrapper">
+        <img src={picture} alt="Profile" className="profile-img" />
+        <div className="profile-info">
           <h2>{name}</h2>
-          <p className="lead text-muted">{email}</p>
+          <p>{email}</p>
         </div>
       </div>
-      <div className="row">
-        <pre className="col-12 text-light bg-dark p-4">
-          {JSON.stringify(user, null, 2)}
-        </pre>
+      <div className="profile-raw-wrapper">
+        <div className="profile-raw-card">
+          <pre id="profile-raw">{JSON.stringify(user, null, 2)}</pre>
+        </div>
       </div>
     </div>
   );
