@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
 import Logo from '../../styles/Images/WhiteLogo.png';
 import { colors } from '../../styles/data_vis_colors';
-import LoginButton from '../common/loginButton';
-import LogoutButton from '../common/logoutButton';
-import SignupButton from '../common/signupButton';
+import LoginButton from '../common/LoginButton';
+import LogoutButton from '../common/LogoutButton';
+import SignupButton from '../common/SignupButton';
 import '../../styles/Header.less';
 
 const { primary_accent_color } = colors;
@@ -38,9 +38,6 @@ function HeaderContent() {
           </Link>
         ) : (
           <SignupButton />
-          // <Link to="/profile" className="nav-links">
-          //   Profile
-          // </Link>
         )}
       </div>
     </div>

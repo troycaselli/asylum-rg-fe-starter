@@ -12,7 +12,6 @@ const Loading = () => (
       flexDirection: 'column',
       marginTop: '50px',
       marginBottom: '50px',
-      flexGrow: 1,
     }}
   >
     <img src={loadingImg} alt="Loading..." />
