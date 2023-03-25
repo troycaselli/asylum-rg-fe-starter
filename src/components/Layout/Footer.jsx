@@ -1,8 +1,8 @@
-import { Button, Space, Typography, Layout, Image } from 'antd';
+import { Space, Typography, Layout, Image } from 'antd';
 import React from 'react';
 import Logo from '../../styles/Images/WhiteLogo.png';
 import { colors } from '../../styles/data_vis_colors';
-
+import '../../styles/Footer.less';
 import '../../styles/RenderLandingPage.less';
 const { Text } = Typography;
 const { primary_accent_color } = colors;
@@ -47,26 +47,23 @@ function SubFooter() {
   };
   return (
     <Footer
-      style={{
-        backgroundColor: primary_accent_color,
-        marginLeft: '-7px',
-      }}
+      style={{ backgroundColor: primary_accent_color, marginLeft: '-20px' }}
     >
-      <Space direction="horizontal">
+      <div direction="horizontal" className="footer-button-wrapper">
         {Object.entries(button_links_by_text).map((text_link_pair, index) => {
           return (
-            <Button
+            <button
               key={index}
               type="text"
               size="small"
               href={text_link_pair[1]}
-              style={{ color: 'white' }}
+              className="footer-buttons"
             >
               {text_link_pair[0]}
-            </Button>
+            </button>
           );
         })}
-      </Space>
+      </div>
     </Footer>
   );
 }

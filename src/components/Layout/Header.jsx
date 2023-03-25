@@ -38,6 +38,9 @@ function HeaderContent() {
           </Link>
         ) : (
           <SignupButton />
+          // <Link to="/profile" className="nav-links">
+          //   Profile
+          // </Link>
         )}
       </div>
     </div>
