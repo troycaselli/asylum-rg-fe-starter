@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
+import '../../../styles/ExternalAPI.less';
 
 // Hidden Component; Path '/external-api'; paired with auth0-express-js-sample directory
 const ExternalApi = () => {
@@ -43,8 +44,8 @@ const ExternalApi = () => {
 
   return (
     <div
-      className="container"
-      style={{ display: 'flex', flexDirection: 'column', flexGrow: 2 }}
+      className="API-page-container"
+      style={{ display: 'flex', flexDirection: 'column' }}
     >
       <h1>External API</h1>
       <p>
@@ -53,29 +54,21 @@ const ExternalApi = () => {
         the access token using the Auth0 Audience value.
       </p>
       <div
-        className="btn-group mt-5"
+        className="btn-group"
         role="group"
         aria-label="External API Requests Examples"
       >
-        <button type="button" className="btn btn-primary" onClick={callApi}>
+        <button type="button" className="API-button" onClick={callApi}>
           Get Public Message
         </button>
-        <button
-          type="button"
-          className="btn btn-primary"
-          onClick={callSecureApi}
-        >
+        <button type="button" className="API-button" onClick={callSecureApi}>
           Get Protected Message
         </button>
       </div>
       {message && (
-        <div className="mt-5">
-          <h6 className="muted">Result</h6>
-          <div className="container-fluid">
-            <div className="row">
-              <code className="col-12 text-light bg-dark p-4">{message}</code>
-            </div>
-          </div>
+        <div className="API-result">
+          <h3 className="muted">Result</h3>
+          <code className="col-12 text-light bg-dark p-4">{message}</code>
         </div>
       )}
     </div>

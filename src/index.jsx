@@ -57,7 +57,7 @@ export function App() {
       >
         <HeaderContent />
       </div>
-      <div>
+      <div style={{ flexGrow: '1' }}>
         <Switch>
           <Route path="/" exact component={LandingPage} />
           <Route path="/graphs" component={GraphsContainer} />
