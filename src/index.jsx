@@ -6,10 +6,12 @@ import 'antd/dist/antd.less';
 import { NotFoundPage } from './components/pages/NotFound';
 import { LandingPage } from './components/pages/Landing';
 import { Profile } from './components/pages/Profile';
+import { ExternalAPI } from './components/pages/ExternalAPI';
 import { FooterContent, SubFooter } from './components/Layout/Footer';
 import { HeaderContent } from './components/Layout/Header';
-// import Loading from './components/common/Loading';
+import Loading from './components/common/Loading';
 import Auth0ProviderWithHistory from './auth/auth0ProviderWithHistory';
+import { useAuth0 } from '@auth0/auth0-react';
 import ProtectedRoute from '../src/auth/protectedRoute';
 import GraphsContainer from './components/pages/DataVisualizations/GraphsContainer';
 
@@ -37,6 +39,12 @@ ReactDOM.render(
 
 export function App() {
   const { Footer } = Layout;
+  const { isLoading } = useAuth0();
+
+  if (isLoading) {
+    return <Loading />;
+  }
+
   return (
     <Layout style={{ minHeight: '100vh' }}>
       <div
@@ -54,6 +62,7 @@ export function App() {
           <Route path="/" exact component={LandingPage} />
           <Route path="/graphs" component={GraphsContainer} />
           <ProtectedRoute path="/profile" component={Profile} />
+          <ProtectedRoute path="/external-api" component={ExternalAPI} />
           <Route component={NotFoundPage} />
         </Switch>
       </div>
