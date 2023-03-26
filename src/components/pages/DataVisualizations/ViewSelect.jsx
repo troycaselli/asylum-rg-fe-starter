@@ -26,9 +26,6 @@ function ViewSelect(props) {
         marginLeft: '40px',
       }}
     >
-      <Button onClick={() => update_view('time-series', office)}>
-        Time Series
-      </Button>
       {office ? (
         ''
       ) : (
@@ -38,6 +35,9 @@ function ViewSelect(props) {
       )}
       <Button onClick={() => update_view('citizenship', office)}>
         Citizenship of Asylum Seeker
+      </Button>
+      <Button onClick={() => update_view('time-series', office)}>
+        Time Series
       </Button>
     </div>
   );

@@ -66,12 +66,9 @@ function RenderLandingPage(props) {
         >
           View the Data
         </Button>
-        <Button
-          className="landing-buttons"
-          onClick={() => history.push('/graphs')}
-        >
-          Download the Data
-        </Button>
+        <a href="data/COW2021001887-I589Data.csv" download="Asylum Data">
+          <Button className="landing-buttons">Download the Data</Button>
+        </a>
       </div>
 
       <section className="middle-section">
