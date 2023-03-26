@@ -1,4 +1,4 @@
-import React, { Highlight } from 'react';
+import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import '../../../styles/Profile.less';
 

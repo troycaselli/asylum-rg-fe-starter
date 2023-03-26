@@ -14,7 +14,6 @@ const rawApiDataToPlotlyReadyInfo = (view, office, data) => {
   let rowItem;
   let rowsForTable;
 
-  console.log(data);
   const yearByOfficeByGrant = {}; //Object that contacts year by Office by grant rate information
   const officeData = {}; //object that holds each % as a key of array value
 
