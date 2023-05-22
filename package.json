@@ -1,5 +1,6 @@
 {
   "name": "labs-spa-starter",
+  "homepage": "https://troycaselli.github.io/asylum-rg-fe-starter",
   "browserslist": {
     "development": [
       "last 1 chrome version",
@@ -41,6 +42,7 @@
     "@testing-library/user-event": "^7.2.1",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-react-hooks": "^4.0.4",
+    "gh-pages": "^5.0.0",
     "husky": "^4.2.5",
     "jest-canvas-mock": "^2.2.0",
     "jest-environment-jsdom-sixteen": "^1.0.3",
@@ -78,6 +80,8 @@
   "private": false,
   "repository": "github:Lambda-School-Labs/labs-spa-starter",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "craco --max_old_space_size=4096 build",
     "coverage": "npm test -- --coverage --watchAll=false",
     "eject": "react-scripts eject",
