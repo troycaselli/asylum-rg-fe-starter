@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/asylum-rg-fe-starter/static/css/main.09b7fd62.chunk.css",
+    "main.js": "/asylum-rg-fe-starter/static/js/main.06f5ecff.chunk.js",
+    "main.js.map": "/asylum-rg-fe-starter/static/js/main.06f5ecff.chunk.js.map",
+    "runtime-main.js": "/asylum-rg-fe-starter/static/js/runtime-main.ff927eca.js",
+    "runtime-main.js.map": "/asylum-rg-fe-starter/static/js/runtime-main.ff927eca.js.map",
+    "static/css/2.d02590dc.chunk.css": "/asylum-rg-fe-starter/static/css/2.d02590dc.chunk.css",
+    "static/js/2.17e936a3.chunk.js": "/asylum-rg-fe-starter/static/js/2.17e936a3.chunk.js",
+    "static/js/2.17e936a3.chunk.js.map": "/asylum-rg-fe-starter/static/js/2.17e936a3.chunk.js.map",
+    "index.html": "/asylum-rg-fe-starter/index.html",
+    "static/css/2.d02590dc.chunk.css.map": "/asylum-rg-fe-starter/static/css/2.d02590dc.chunk.css.map",
+    "static/css/main.09b7fd62.chunk.css.map": "/asylum-rg-fe-starter/static/css/main.09b7fd62.chunk.css.map",
+    "static/js/2.17e936a3.chunk.js.LICENSE.txt": "/asylum-rg-fe-starter/static/js/2.17e936a3.chunk.js.LICENSE.txt",
+    "static/media/paper-stack.4c075b2d.jpg": "/asylum-rg-fe-starter/static/media/paper-stack.4c075b2d.jpg",
+    "static/media/pie-chart-no-text.ade08c34.png": "/asylum-rg-fe-starter/static/media/pie-chart-no-text.ade08c34.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ff927eca.js",
+    "static/css/2.d02590dc.chunk.css",
+    "static/js/2.17e936a3.chunk.js",
+    "static/css/main.09b7fd62.chunk.css",
+    "static/js/main.06f5ecff.chunk.js"
+  ]
+}
